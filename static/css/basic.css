@@ -1,0 +1,1166 @@
+/*----------設定變數----------*/
+:root{
+    /*-----色彩命名-----*/
+    --black: #000000ff;/*--ff為透明度--*/
+    --grey:#545454ff;
+    --silver:#6f6f6fff;
+    --spanish:#999999FF;
+    --gainsboro:#e0e0e0ff;
+    --white:#ffffffff;
+    --pink: #F18AB8ff;
+    --mimi: #F9CDDEff;
+    --piggy: #FAE4EEff;
+    --red: #FF0000ff;
+    --empty:#ffffff00;
+    --info: #2F80EDff;
+    --success: #27AE60ff;
+    --error: #EB5757ff;
+    --warning: #E2B93Bff;
+
+    /*-----文字尺寸-----*/
+    --h1:30px;
+    --h2:26px;
+    --h3:24px;
+    --h4:22px;
+    --h5:20px;
+    --h6:18px;
+    --normal:16px;
+    --small:14px;
+    --mini:12px;
+
+    /*-----間距基準-----*/
+    --spacing1:8px;
+    --spacing2:16px;
+    --spacing3:24px;
+    --spacing4:32px;
+    --spacing5:40px;
+    --spacing6:56px;
+    --spacing7:72px;
+    --spacing8:80px;
+    --spacing9:96px;
+    --spacing10:120px;
+
+    /*-----行高&字距基準-----*/
+    --size_normal:10px;
+    --size_basic:0.1;
+}
+
+/*----------基本元件設定----------*/
+html,body{
+    font-family: "Nanum Gothic","微軟正黑體","sans-serif";
+    color: var(--grey,#545454ff);
+    /*#545454ff為預防舊版瀏覽器的設定值*/
+    height: 100%;
+    font-size: var(--normal);
+}
+
+a:link,a:active,a:visited{
+    color: var(--pink,#F18AB8ff);
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--black,#000000ff);
+    text-decoration: underline;
+}
+
+/*----------常用元件設定----------*/
+/*-------標題文字-------*/
+h1{
+    font-size: var(--h1, 30px);
+    font-weight: 800;
+    line-height: calc(var(--size_basic, 0.1)*25);
+    margin: calc(var(--size_normal, 10px)*2) 0;
+}
+
+h2{
+    font-size: var(--h2, 26px);
+    font-weight: 800;
+    line-height: calc(var(--size_basic, 0.1)*20);
+    text-transform: uppercase;
+}
+
+h3{
+    font-size: var(--h3, 24px);
+    font-weight: 400;
+    line-height: calc(var(--size_basic, 0.1)*20);
+    text-transform: uppercase;
+}
+
+h4{
+    font-size: var(--h4, 22px);
+    font-weight: 400;
+    line-height: calc(var(--size_basic, 0.1)*20);
+}
+
+h5{
+    font-size: var(--h5, 20px);
+    font-weight: 400;
+    line-height: calc(var(--size_basic, 0.1)*20);
+}
+
+h6{
+    font-size: var(--h6, 18px);
+    font-weight: 400;
+    line-height: calc(var(--size_basic, 0.1)*20);
+}
+
+p{
+    font-size: var(--normal, 16px);
+    line-height: calc(var(--size_basic, 0.1)*13);
+}
+
+small{
+    font-size: var(--small);
+    line-height: calc(var(--size_basic)*11);
+}
+
+/*----------文字排版樣式----------*/
+/*-------文字尺寸-------*/
+.font-size-12{
+    font-size: var(--mimi, 12px) !important;
+}
+
+.font-size-14{
+    font-size: var(--small, 14px) !important;
+}
+
+.font-size-16{
+    font-size: var(--normal, 16px) !important;
+}
+
+.font-size-18{
+    font-size: var(--h6, 18px) !important;
+}
+
+.font-size-20{
+    font-size: var(--h5, 20px) !important;
+}
+
+.font-size-22{
+    font-size: var(--h4, 22px) !important;
+}
+
+.font-size-24{
+    font-size: var(--h3, 24px) !important;
+}
+
+.font-size-26{
+    font-size: var(--h2, 26px) !important;
+}
+
+.font-size-30{
+    font-size: var(--h1, 30px) !important;
+}
+
+.font-size-36{
+    font-size: calc(var(--h6, 18px)*2) !important;
+}
+
+.font-size-40{
+    font-size: calc(var(--size_normal, 10px)*4) !important;
+}
+
+.font-size-50{
+    font-size: calc(var(--size_normal, 10px)*5) !important;
+}
+
+.font-size_smaller{
+    font-size: 80% !important;
+}
+
+.font-size_bigger{
+    font-size: 120% !important;
+}
+
+/*-------文字粗體-------*/
+.font-weight_800{
+    font-weight: 800;
+}
+
+.font-weight_700{
+    font-weight: 700;
+}
+
+.font-weight_600{
+    font-weight: 600;
+}
+
+.font-weight_400{
+    font-weight: 400;
+}
+
+.font-weight_bolder{
+    font-weight: bolder;
+}
+
+.font-weight_normal{
+    font-weight: normal;
+}
+
+/*-------文字大小寫-------*/
+.text_uppercase{
+    text-transform: uppercase;
+}
+
+.text_lowercase{
+    text-transform: lowercase;
+}
+
+.text_nocase{
+    text-transform: none;
+}
+
+/*-------文字彩色-------*/
+.color_black{
+    color: var(--black, #000000ff);
+}
+
+.color_grey{
+    color: var(--grey, #545454ff);
+}
+
+.color_silver{
+    color: var(--silver, #6f6f6fff);
+}
+
+.color_spanish{
+    color: var(--spanish, #999999ff);
+}
+
+.color_gainsboro{
+    color: var(--gainsboro, #e0e0e0ff);
+}
+
+.color_white{
+    color: var(--white, #ffffffff);
+}
+
+.color_pink{
+    color: var(--pink, #f18ab8ff);
+}
+
+.color_mimi{
+    color: var(--mimi, #f9cddeff);
+}
+
+.color_piggy{
+    color: var(--piggy, #fae4eeff);
+}
+
+.color_red{
+    color: var(--red, #ff0000ff);
+}
+
+/*-------段落設定-------*/
+/*-------行高設定-------*/
+.line-height_13{
+    line-height: calc(var(--size_basic, 0.1)*13);
+}
+
+.line-height_15{
+    line-height: calc(var(--size_basic, 0.1)*15);
+}
+
+.line-height_1{
+    line-height: calc(var(--size_basic, 0.1)*10);
+}
+
+.line-height_2{
+    line-height: calc(var(--size_basic, 0.1)*20);
+}
+
+.line-height_3{
+    line-height: calc(var(--size_basic, 0.1)*30);
+}
+
+.line-height_4{
+    line-height: calc(var(--size_basic, 0.1)*40);
+}
+
+.line-height_5{
+    line-height: calc(var(--size_basic, 0.1)*50);
+}
+
+.line-height_6{
+    line-height: calc(var(--size_basic, 0.1)*60);
+}
+
+.line-height_7{
+    line-height: calc(var(--size_basic, 0.1)*70);
+}
+
+.line-height_8{
+    line-height: calc(var(--size_basic, 0.1)*80);
+}
+
+.line-height_9{
+    line-height: calc(var(--size_basic, 0.1)*90);
+}
+
+.line-height_10{
+    line-height: calc(var(--size_normal, 10px)*1);
+}
+
+.line-height_20{
+    line-height: calc(var(--size_normal, 10px)*2);
+}
+
+.line-height_30{
+    line-height: calc(var(--size_normal, 10px)*3);
+}
+
+.line-height_40{
+    line-height: calc(var(--size_normal, 10px)*4);
+}
+
+.line-height_50{
+    line-height: calc(var(--size_normal, 10px)*5);
+}
+
+/*-------段落對齊-------*/
+.text-align_left{
+    text-align: left;
+}
+
+.text-align_center{
+    text-align: center;
+}
+
+.text-align_right{
+    text-align: right;
+}
+
+.text-align_justify{
+    text-align: justify;
+}
+
+/*-------文字特殊樣式-------*/
+/*-------文字陰影-------*/
+.text-shadow-2{
+    text-shadow: 0 0 2px var(--grey, #545454ff);
+}
+
+/*-------文字拆行-------*/
+.ellipsis_1{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ellipsis_2{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    /*行數*/
+    overflow: hidden;
+}
+
+.ellipsis_3{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    /*行數*/
+    overflow: hidden;
+}
+
+.ellipsis_4{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    /*行數*/
+    overflow: hidden;
+}
+
+.ellipsis_5{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    /*行數*/
+    overflow: hidden;
+}
+
+/*-------首字放大-------*/
+.first-letter-effect:first-letter{
+    font-size: 200%;
+    color: var(--pink, #f18ab8ff);
+    font-weight: bold;
+}
+
+/*-------提示文字-------*/
+.tooltip{
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext{
+    visibility: hidden;
+    width: 120px;
+    background-color: var(--pink, #f18ab8ff);
+    color: var(--white, #ffffffff);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 10000;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.tooltip:hover .tooltiptext{
+    visibility: visible;
+    opacity: 1;
+}
+
+/*-------作用文字-------*/
+.highlight_txt{
+    border-bottom: 3px solid var(--spanish, #999999ff);
+    font-weight: 800 !important;
+    text-transform: uppercase;
+    color: var(--pink, #f18ab8ff) !important;
+}
+
+.active_txt{
+    padding: var(--size_normal, 10px);
+    background-color: var(--pink, #f18ab8ff);
+    color: var(--white, #ffffffff);
+}
+
+/*-------區塊樣式設定-------*/
+/*-------背影顏色設定-------*/
+.bg_black{
+    background-color: var(--black, #000000ff);
+}
+
+.bg_grey{
+    background-color: var(--grey, #545454ff);
+}
+
+.bg_silver{
+    background-color: var(--silver, #6f6f6fff);
+}
+
+.bg_spanish{
+    background-color: var(--spanish, #999999ff);
+}
+
+.bg_white{
+    background-color: var(--white, #ffffffff);
+}
+
+.bg_pink{
+    background-color: var(--pink, #f18ab8ff);
+}
+
+.bg_mimi{
+    background-color: var(--mimi, #f9cddeff);
+}
+
+.bg_piggy{
+    background-color: var(--piggy, #fae4eeff);
+}
+
+.bg_red{
+    background-color: var(--red, #ff0000ff);
+}
+
+/*-------漸層顏色設定-------*/
+.gradient_silver{
+    background-image: linear-gradient(var(--white, #ffffffff)0%, var(--silver, #6f6f6fff)150%);
+}
+
+.gradient_gery{
+    background-image: linear-gradient(var(--white, #ffffffff)0%, var(--grey, #545454ff)150%);
+}
+
+.gradient_black{
+    background-image: linear-gradient(var(--white, #ffffffff)0%, var(--black, #000000ff)150%);
+}
+
+.gradient_pink{
+    background-image: linear-gradient(var(--white, #ffffffff)0%, var(--pink, #f18ab8ff)150%);
+}
+
+.gradient_mimi{
+    background-image: linear-gradient(var(--white, #ffffffff)0%, var(--mimi, #f9cddeff)150%);
+}
+
+.gradient_piggy{
+    background-image: linear-gradient(var(--white, #ffffffff)0%, var(--piggy, #fae4eeff)150%);
+}
+
+.gradient_line{
+    background-image: repeating-linear-gradient(var(--piggy, #fae4eeff)26%, var(--pink, #f18ab8ff)27%, var(--piggy, #fae4eeff)28%);
+}
+
+/*-------Padding設定-------*/
+.padding_left-10{
+    padding-left: calc(var(--size_normal, 10px)*1);
+}
+
+.padding_left-20{
+    padding-left: calc(var(--size_normal, 10px)*2);
+}
+
+.padding_left-30{
+    padding-left: calc(var(--size_normal, 10px)*3);
+}
+
+.padding_left-40{
+    padding-left: calc(var(--size_normal, 10px)*4);
+}
+
+.padding_left-50{
+    padding-left: calc(var(--size_normal, 10px)*5);
+}
+
+.padding_right-10{
+    padding-left: calc(var(--size_normal, 10px)*1);
+}
+
+.padding_right-20{
+    padding-left: calc(var(--size_normal, 10px)*2);
+}
+
+.padding_right-30{
+    padding-left: calc(var(--size_normal, 10px)*3);
+}
+
+.padding_right-40{
+    padding-left: calc(var(--size_normal, 10px)*4);
+}
+
+.padding_right-50{
+    padding-left: calc(var(--size_normal, 10px)*5);
+}
+
+.padding_h1{
+    padding-left: calc(var(--size_normal, 10px)*1);
+    padding-right: calc(var(--size_normal, 10px)*1);
+}
+
+.padding_h2{
+    padding-left: calc(var(--size_normal, 10px)*2);
+    padding-right: calc(var(--size_normal, 10px)*2);
+}
+
+.padding_h3{
+    padding-left: calc(var(--size_normal, 10px)*3);
+    padding-right: calc(var(--size_normal, 10px)*3);
+}
+
+.padding_h4{
+    padding-left: calc(var(--size_normal, 10px)*4);
+    padding-right: calc(var(--size_normal, 10px)*4);
+}
+
+.padding_h45{
+    padding-left: calc(var(--size_normal, 10px)*4.5);
+    padding-right: calc(var(--size_normal, 10px)*4.5);
+}
+
+.padding_h5{
+    padding-left: calc(var(--size_normal, 10px)*5);
+    padding-right: calc(var(--size_normal, 10px)*5);
+}
+
+.padding_h85{
+    padding-left: calc(var(--size_normal, 10px)*8.5);
+    padding-right: calc(var(--size_normal, 10px)*8.5);
+}
+
+.padding_top-10{
+    padding-top: calc(var(--size_normal, 10px)*1);
+}
+
+.padding_top-20{
+    padding-top: calc(var(--size_normal, 10px)*2);
+}
+
+.padding_top-30{
+    padding-top: calc(var(--size_normal, 10px)*3);
+}
+
+.padding_top-40{
+    padding-top: calc(var(--size_normal, 10px)*4);
+}
+
+.padding_top-50{
+    padding-top: calc(var(--size_normal, 10px)*5);
+}
+
+.padding_bottom-10{
+    padding-bottom: calc(var(--size_normal, 10px)*1);
+}
+
+.padding_bottom-20{
+    padding-bottom: calc(var(--size_normal, 10px)*2);
+}
+
+.padding_bottom-30{
+    padding-bottom: calc(var(--size_normal, 10px)*3);
+}
+
+.padding_bottom-40{
+    padding-bottom: calc(var(--size_normal, 10px)*4);
+}
+
+.padding_bottom-50{
+    padding-bottom: calc(var(--size_normal, 10px)*5);
+}
+
+.padding_v1{
+    padding-top: calc(var(--size_normal, 10px)*1);
+    padding-bottom: calc(var(--size_normal, 10px)*1);
+}
+
+.padding_v2{
+    padding-top: calc(var(--size_normal, 10px)*2);
+    padding-bottom: calc(var(--size_normal, 10px)*2);
+}
+
+.padding_v3{
+    padding-top: calc(var(--size_normal, 10px)*3);
+    padding-bottom: calc(var(--size_normal, 10px)*3);
+}
+
+.padding_v4{
+    padding-top: calc(var(--size_normal, 10px)*4);
+    padding-bottom: calc(var(--size_normal, 10px)*4);
+}
+
+.padding_v45{
+    padding-top: calc(var(--size_normal, 10px)*4.5);
+    padding-bottom: calc(var(--size_normal, 10px)*4.5);
+}
+
+.padding_v5{
+    padding-top: calc(var(--size_normal, 10px)*5);
+    padding-bottom: calc(var(--size_normal, 10px)*5);
+}
+
+.padding_v85{
+    padding-top: calc(var(--size_normal, 10px)*8.5);
+    padding-bottom: calc(var(--size_normal, 10px)*8.5);
+}
+
+.padding_1{
+    padding: calc(var(--size_normal, 10px)*1);
+}
+
+.padding_2{
+    padding: calc(var(--size_normal, 10px)*2);
+}
+
+.padding_3{
+    padding: calc(var(--size_normal, 10px)*3);
+}
+
+.padding_4{
+    padding: calc(var(--size_normal, 10px)*4);
+}
+
+.padding_45{
+    padding: calc(var(--size_normal, 10px)*4.5);
+}
+
+.padding_5{
+    padding: calc(var(--size_normal, 10px)*5);
+}
+
+.padding_85{
+    padding: calc(var(--size_normal, 10px)*8.5);
+}
+
+/*-------Margin設定-------*/
+.margin_left-10{
+    margin-left: calc(var(--size_normal, 10px)*1);
+}
+
+.margin_left-20{
+    margin-left: calc(var(--size_normal, 10px)*2);
+}
+
+.margin_left-30{
+    margin-left: calc(var(--size_normal, 10px)*3);
+}
+
+.margin_left-40{
+    margin-left: calc(var(--size_normal, 10px)*4);
+}
+
+.margin_left-50{
+    margin-left: calc(var(--size_normal, 10px)*5);
+}
+
+.margin_right-10{
+    margin-right: calc(var(--size_normal, 10px)*1);
+}
+
+.margin_right-20{
+    margin-right: calc(var(--size_normal, 10px)*2);
+}
+
+.margin_right-30{
+    margin-right: calc(var(--size_normal, 10px)*3);
+}
+
+.margin_right-40{
+    margin-right: calc(var(--size_normal, 10px)*4);
+}
+
+.margin_right-50{
+    margin-right: calc(var(--size_normal, 10px)*5);
+}
+
+.margin_h1{
+    margin-left: calc(var(--size_normal, 10px)*1);
+    margin-right: calc(var(--size_normal, 10px)*1);
+}
+
+.margin_h2{
+    margin-left: calc(var(--size_normal, 10px)*2);
+    margin-right: calc(var(--size_normal, 10px)*2);
+}
+
+.margin_h3{
+    margin-left: calc(var(--size_normal, 10px)*3);
+    margin-right: calc(var(--size_normal, 10px)*3);
+}
+
+.margin_h4{
+    margin-left: calc(var(--size_normal, 10px)*4);
+    margin-right: calc(var(--size_normal, 10px)*4);
+}
+
+.margin_h45{
+    margin-left: calc(var(--size_normal, 10px)*4.5);
+    margin-right: calc(var(--size_normal, 10px)*4.5);
+}
+
+.margin_h5{
+    margin-left: calc(var(--size_normal, 10px)*5);
+    margin-right: calc(var(--size_normal, 10px)*5);
+}
+
+.margin_h85{
+    margin-left: calc(var(--size_normal, 10px)*8.5);
+    margin-right: calc(var(--size_normal, 10px)*8.5);
+}
+
+.margin_top-10{
+    margin-top: calc(var(--size_normal, 10px)*1);
+}
+
+.margin_top-20{
+    margin-top: calc(var(--size_normal, 10px)*2);
+}
+
+.margin_top-30{
+    margin-top: calc(var(--size_normal, 10px)*3);
+}
+
+.margin_top-40{
+    margin-top: calc(var(--size_normal, 10px)*4);
+}
+
+.margin_top-50{
+    margin-top: calc(var(--size_normal, 10px)*5);
+}
+
+.margin_bottom-10{
+    margin-bottom: calc(var(--size_normal, 10px)*1);
+}
+
+.margin_bottom-20{
+    margin-bottom: calc(var(--size_normal, 10px)*2);
+}
+
+.margin_bottom-30{
+    margin-bottom: calc(var(--size_normal, 10px)*3);
+}
+
+.margin_bottom-40{
+    margin-bottom: calc(var(--size_normal, 10px)*4);
+}
+
+.margin_bottom-50{
+    margin-bottom: calc(var(--size_normal, 10px)*5);
+}
+
+.margin_v1{
+    margin-top: calc(var(--size_normal, 10px)*1);
+    margin-bottom: calc(var(--size_normal, 10px)*1);
+}
+
+.margin_v2{
+    margin-top: calc(var(--size_normal, 10px)*2);
+    margin-bottom: calc(var(--size_normal, 10px)*2);
+}
+
+.margin_v3{
+    margin-top: calc(var(--size_normal, 10px)*3);
+    margin-bottom: calc(var(--size_normal, 10px)*3);
+}
+
+.margin_v4{
+    margin-top: calc(var(--size_normal, 10px)*4);
+    margin-bottom: calc(var(--size_normal, 10px)*4);
+}
+
+.margin_v45{
+    margin-top: calc(var(--size_normal, 10px)*4.5);
+    margin-bottom: calc(var(--size_normal, 10px)*4.5);
+}
+
+.margin_v5{
+    margin-top: calc(var(--size_normal, 10px)*5);
+    margin-bottom: calc(var(--size_normal, 10px)*5);
+}
+
+.margin_v85{
+    margin-top: calc(var(--size_normal, 10px)*8.5);
+    margin-bottom: calc(var(--size_normal, 10px)*8.5);
+}
+
+.margin_1{
+    margin: calc(var(--size_normal,10px)*1);
+}
+
+.margin_2{
+    margin: calc(var(--size_normal,10px)*2);
+}
+
+.margin_3{
+    margin: calc(var(--size_normal,10px)*3);
+}
+
+.margin_4{
+    margin: calc(var(--size_normal,10px)*4);
+}
+
+.margin_45{
+    margin: calc(var(--size_normal,10px)*4.5);
+}
+
+.margin_5{
+    margin: calc(var(--size_normal,10px)*5);
+}
+
+.margin_85{
+    margin: calc(var(--size_normal,10px)*8.5);
+}
+
+/*-------位置設定-------*/
+/*-------浮動設定-------*/
+.float_left{
+    float: left;
+}
+
+.float_right{
+    float: right;
+}
+
+.float_none{
+    float: none;
+}
+
+.float_both{
+    clear: both;
+}
+
+/*-------Position設定-------*/
+.position_absolute-bottom-20{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.position_absolute-center{
+    position: absolute;
+    z-index: 99;
+    bottom: 0;
+    left: 28%;
+}
+
+.position_relative{
+    position: relative;
+}
+
+/*-------Display設定-------*/
+.display_block{
+    display: block !important;
+}
+
+.display_inlineblock{
+    display: inline-block !important;
+}
+
+.display_inline{
+    display: inline !important;
+}
+
+/*-------邊框設定-------*/
+.border-radius_15{
+    border-radius: 15px;
+}
+
+.border-radius_30{
+    border-radius: 30px;
+}
+
+.border-radius_all{
+    border-radius: 100%;
+}
+
+.border_bottom-5{
+    border-bottom: 5px solid var(--pink, #f18ab8ff);
+}
+
+.boxshadow_pink-5{
+    box-shadow: 0 0 5px 10px var(--pink, #f18ab8ff);
+}
+
+.boxshadow_pink-10{
+    box-shadow: 0 0 10px 10px var(--pink, #f18ab8ff);
+}
+
+.boxshadow_pink-15{
+    box-shadow: 0 0 15px 10px var(--pink, #f18ab8ff);
+}
+
+.boxshadow_silver-5{
+    box-shadow: 0 0 5px 10px var(--silver, #6f6f6fff);
+}
+
+.boxshadow_silver-10{
+    box-shadow: 0 0 10px 10px var(--silver, #6f6f6fff);
+}
+
+.boxshadow_silver-15{
+    box-shadow: 0 0 15px 10px var(--silver, #6f6f6fff);
+}
+
+.dropshadow_silver-5{
+    filter: drop-shadow(0 0 5px var(--silver, #6f6f6fff));
+}
+
+.dropshadow_silver-10{
+    filter: drop-shadow(0 0 10px var(--silver, #6f6f6fff));
+}
+
+.dropshadow_silver-15{
+    filter: drop-shadow(0 0 15px var(--silver, #6f6f6fff));
+}
+
+/*-------分欄設定-------*/
+.column-count_1{
+    column-count: 1;
+}
+
+.column-count_2{
+    column-count: 2;
+}
+
+.column-count_3{
+    column-count: 3;
+}
+
+.column-count_4{
+    column-count: 4;
+}
+
+.column-count_5{
+    column-count: 5;
+}
+
+.column-gap_50{
+    column-gap: 50px;
+}
+.column-gap_40{
+    column-gap: 40px;
+}
+.column-gap_30{
+    column-gap: 30px;
+}
+.column-gap_20{
+    column-gap: 20px;
+}
+.column-gap_10{
+    column-gap: 10px;
+}
+.column-gap_0{
+    column-gap: 0;
+}
+
+.column-rule{
+    column-rule: 1px solid var(--spanish, #999999ff);
+}
+
+/*-------背景圖位置-------*/
+.bg_top{
+    background-position: top;
+}
+
+.bg_bottom{
+    background-position: bottom;
+}
+
+/*-------圖片效果設定-------*/
+.flip_img{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.vertical_align-middle{
+    vertical-align: middle;
+}
+
+.vertical_align-bottom{
+    vertical-align: bottom;
+}
+
+.pic_width-350{
+    width: calc(var(--size_normal, 10px)*35);
+    height: auto;
+}
+
+.pic_transform{
+    transform: scale(1,1);
+    transition: transform 0.4s linear;
+}
+
+.pic_transform:hover{
+    transform: scale(1.5,1.5);
+    opacity: 0.6;
+    box-shadow: 0 0 10px 5px var(--grey, #545454ff);
+    z-index: 1000;
+    position: relative;/*position要啟用，z-index才有作用*//*滑鼠經過顯示在最上層*/
+}
+
+.pic_drop-shadow{
+    filter: drop-shadow(5px 5px 5px var(--grey, #545454ff));
+}
+
+/*-------組件樣式設定-------*/
+/*-------按鈕顏色-------*/
+.button_grey{
+    font-size: var(--size_normal, 16px);
+    font-weight: bolder;
+    text-align: center;
+    color: var(--white, #ffffffff);
+    background-color: var(--grey, #545454ff);
+}
+
+.button_grey:hover{
+    color: var(--grey, #545454ff);
+    background-color: var(--white, #ffffffff);
+}
+
+.button_grey:active{
+    color: var(--white, #ffffffff);
+    background-image: linear-gradient(var(--white, #ffffffff)0%, var(--grey, #545454ff)150%);
+}
+
+.button_grey-gradient{
+    font-size: var(--size_normal, 16px);
+    font-weight: bolder;
+    text-align: center;
+    color: var(--white, #ffffffff);
+    background-image: linear-gradient(var(--white, #ffffffff)0%, var(--grey, #545454ff)150%);
+}
+
+.button_grey-gradient:hover,
+.button_grey-gradient:active{
+    background-image: linear-gradient(var(--grey, #545454ff)0%, var(--white, #ffffffff)150%);
+}
+
+.button_pink{
+    font-size: var(--size_normal, 16px);
+    font-weight: bolder;
+    text-align: center;
+    color: var(--grey, #545454ff);
+    background-color: var(--pink, #f18ab8ff);
+}
+
+.button_pink:hover{
+    color: var(--grey, #545454ff);
+    background-color: var(--mimi, #f9cddeff);
+}
+
+.button_pink:active{
+    color: var(--grey, #545454ff);
+    background-image: linear-gradient(var(--white, #ffffffff)0%, var(--pink, #f18ab8ff)150%);
+}
+
+.button_pink-gradient{
+    font-size: var(--size_normal,16px);
+    font-weight: bolder;
+    text-align: center;
+    color: var(--grey, #545454ff);
+    background-image: linear-gradient(var(--white, #ffffffff)0%, var(--pink, #f18ab8ff)150%);
+}
+
+.button_pink-gradient:hover,
+.button_pink-gradient:active{
+    background-image: linear-gradient(var(--pink, #f18ab8ff)0%, var(--white, #ffffffff)150%);
+    filter: drop-shadow(1px 1px 5px var(--grey, #545454ff));
+}
+
+.button_disable{
+    color: var(--white, #ffffffff);
+    background-color: var(--gainsboro, #e0e0e0ff);
+}
+
+/*-------按鈕尺寸-------*/
+.button_large{
+    width: calc(100% - 20px);
+    height: 30px;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.button_medium{
+    width: calc(100% - 30px);
+    height: 30px;
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+
+.button_normal{
+    width: calc(100% - 40px);
+    height: 30px;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+.button_small{
+    width: calc(100% - 50px);
+    height: 30px;
+    border-radius: 8px;
+    padding: 10px 25px;
+}
+
+.button_extra-small{
+    width: calc(100% - 40px);
+    height: 30px;
+    border-radius: 50%;
+    padding: 10px 20px;
+}
+
+.button_large:hover,
+.button_medium:hover,
+.button_small:hover,
+.button_extra-small:hover{
+    box-shadow: 0 0 8px 0 var(--grey, #545454ff);
+}
+
+/*-------指標樣式-------*/
+.cursor_pointer{
+    cursor: pointer;
+}

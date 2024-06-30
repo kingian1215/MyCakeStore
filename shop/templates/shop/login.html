@@ -1,0 +1,20 @@
+{% extends 'shop/header.html' %}
+
+{% block title %}Login - Cake Store{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="jumbotron mt-3">
+        <h1>會員登入</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+        <p></p>
+        <p>還沒有帳號嗎? <a href="{% url 'register' %}">註冊</a></p>
+    </div>
+</div>
+{% endblock %}
+
+

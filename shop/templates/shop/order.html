@@ -1,0 +1,32 @@
+{% extends 'shop/header.html' %}
+{% block title %}Order-Cake Store{% endblock %}
+{% block content %}
+<style>
+    body {
+        background-color: #f2f2f2;
+    }
+    .register-container {
+        margin-top: 50px;
+    }
+    .card{
+        border-radius: 10px;
+    }
+</style>
+<div class="container register-container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h4>Order</h4>
+                    <form method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-primary">Place Order</button>
+                    </form>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

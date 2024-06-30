@@ -1,0 +1,22 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}Home - Cake Store{% endblock %}
+
+{% block content %}
+    <h1>Cake Store</h1>
+    <div class="row">
+        {% for cake in cakes %}
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{{ cake.image.url }}" class="card-img-top" alt="{{ cake.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ cake.name }}</h5>
+                        <p class="card-text">${{ cake.price }}</p>
+                        <a href="{% url 'order'%}" class="btn btn-primary">Order Now</a>
+ 
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
